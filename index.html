@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="require.js"></script>
+</head>
+
+<body>
+    <title>遠距教學影片管理系統</title>
+    <div class="Title">遠距教學影片管理系統</div>
+    <div class="BarBG"></div>
+    <div class="FunctionBar">
+        <div class="Tag" id="0">會員管理</div>
+        <div class="Tag" id="1">影片管理</div>
+        <div class="Tag" id="2">影片數據</div>
+        <div class="Tag" id="3">權限管理</div>
+    </div>
+
+    <table id="userName">
+        <thead>
+            <tr>
+                <th colspan="2">會員管理</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="center">會員名稱</td>
+                <td class="center">功能</td>
+            </tr>
+        </tbody>
+        <tbody id="table">
+        </tbody>
+    </table>
+    <table id="Authority" style="visibility:hidden">
+        <thead>
+            <tr>
+                <th colspan="3">權限管理</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="center">會員名稱</td>
+                <td class="center">會員權限</td>
+                <td class="center">功能</td>
+            </tr>
+        </tbody>
+        <tbody id="tableAuthority">
+        </tbody>
+    </table>
+
+    
+    <table id="VideoData" style="visibility:hidden">
+        <thead>
+            <tr>
+                <th colspan="3">影片數據</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="center">影片名稱</td>
+                <td class="center">觀看次數</td>
+                <td class="center">觀看時長</td>
+            </tr>
+        </tbody>
+        <tbody id="tableVideoData">
+        </tbody>
+    </table>
+
+    <div id=video style="visibility:hidden">
+        <div class="divTitle">影片管理</div>
+        <div class="videoCon"><video muted controls id="videoplay" class="video" src="./assets/0.mp4" type="video/mp4"></video>
+            <div class="scroll" id="upload"> 
+                <div class="scrollItem" id="video0">0.mp4</div>
+                <div class="scrollItem" id="video1">1.mp4</div>
+                <div class="scrollItem" id="video2">2.mp4</div>
+                <div class="scrollItem" id="video3">3.mp4</div>
+            </div>
+            
+            <div class="videoBtnCon">
+                <button type="button" class="videoBtn" id = "up"><上傳</button>
+                <button type="button" class="videoBtn" id = "del">刪除></button>
+            </div>
+            <div class="scroll" id="delete">
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
